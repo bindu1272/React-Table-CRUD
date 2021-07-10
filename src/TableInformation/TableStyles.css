@@ -1,0 +1,31 @@
+.details {
+  margin-top: 24px;
+}
+label {
+  margin-right: 12px;
+  font-weight: 600;
+}
+button {
+  cursor: pointer;
+  color: black;
+  height: 32px;
+  font-weight: 600;
+  outline: none;
+  font-size: 16px;
+}
+table {
+  width: 40%;
+  margin-top: 24px;
+  border-collapse: collapse;
+}
+table td,
+th {
+  border: 1px solid #dddddd;
+  text-align: center;
+}
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+.no-data {
+  text-align: center;
+}
