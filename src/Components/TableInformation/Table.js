@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from "react";
+import React, { Component} from "react";
 import "./TableStyles.css";
 import Helper from "./Helper";
 import { SUBJECTS } from "./Constants";

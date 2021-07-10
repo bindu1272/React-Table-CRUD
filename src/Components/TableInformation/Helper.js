@@ -106,7 +106,7 @@ const Helper = {
             return (
               <tr>
                 <td key={index}>{studentRecord.studentName}</td>
-                <td>
+                <td className="actions">
                   <button onClick={() => editInformation(index)}>Edit</button>
                   <button onClick={() => removeInformation(index)}>
                     Remove
