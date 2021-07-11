@@ -3,7 +3,6 @@ import TableReact from "./Components/TableReact/TableReact";
 import "./Components/Utils/TableStyles.css";
 import { BrowserRouter as Router, Route, Link, Switch, NavLink } from "react-router-dom";
 import Table from "./Components/TableInformation/Table.js";
-import Home from "./Components/Home.js";
 
 class App extends Component {
   render() {
