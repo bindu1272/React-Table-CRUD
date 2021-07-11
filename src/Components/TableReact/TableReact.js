@@ -1,9 +1,12 @@
-import React, { Component} from "react";
+import React, { Component } from "react";
+import ReactTable from "react-table";
+import "react-table/react-table.css";
 import Helper from "../Utils/Helper";
 import { SUBJECTS } from "../Utils/Constants";
-class Table extends Component {
-  constructor() {
-    super();
+class TableReact extends Component {
+  constructor(props) {
+    super(props)
+  
     this.state = {
       isEdit: false,
       students: {
@@ -13,8 +16,8 @@ class Table extends Component {
         phoneNumber: "",
         subjects: SUBJECTS,
       },
-      studentInfo: [],
-    };
+      studentInfo: []
+    }
   }
   changeCheckboxHandler = (index) => {
     let students = { ...this.state.students };
@@ -79,7 +82,7 @@ class Table extends Component {
   };
   editInformation = (index) => {
     let studentInfo = [...this.state.studentInfo];
-    let students = studentInfo[index];
+    let students =  studentInfo[index];
     students["index"] = index;
     let subjects = [...SUBJECTS];
     let checkedSubjects = [...students.subjects];
@@ -113,6 +116,22 @@ class Table extends Component {
     });
   };
   render() {
+    const columns = [
+      {
+        Header: "Student Name",
+        accessor: "studentName",
+        show: true,
+      },
+      {
+        Header: "Action",
+        Cell: (row) => (
+          <div>
+              <button onClick={()=>this.editInformation(row.index)}>Edit</button>
+              <button onClick={()=>this.removeInformation(row.index)}>Delete</button>
+          </div>
+        )
+      }
+    ];
     return (
       <div>
         {Helper.formTemplate(
@@ -126,13 +145,14 @@ class Table extends Component {
           this.changeCheckboxHandler,
           this.createInformation
         )}
-        {Helper.tableofInformation(
-          this.state.studentInfo,
-          this.editInformation,
-          this.removeInformation
-        )}
+        <ReactTable
+          data={this.state.studentInfo}
+          minRows={1}
+          columns={columns}
+          showPagination={false}
+        />
       </div>
     );
   }
 }
-export default Table;
+export default TableReact;

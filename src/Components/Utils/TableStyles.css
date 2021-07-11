@@ -5,6 +5,9 @@ label {
   margin-right: 12px;
   font-weight: 600;
 }
+fieldset{
+  margin-bottom: 40px;
+}
 button {
   cursor: pointer;
   color: black;
@@ -15,7 +18,6 @@ button {
 }
 table {
   width: 40%;
-  margin-top: 24px;
   border-collapse: collapse;
   margin-left: auto;
   margin-right: auto;
