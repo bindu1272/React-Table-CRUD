@@ -5,8 +5,9 @@ label {
   margin-right: 12px;
   font-weight: 600;
 }
-fieldset{
+fieldset {
   margin-bottom: 40px;
+  margin-top: 40px;
 }
 button {
   cursor: pointer;
@@ -28,13 +29,68 @@ table {
 }
 table td,
 th {
-  border: 1px solid #dddddd;
+  border: 1px solid;
   text-align: center;
   padding: 8px;
 }
-tr:nth-child(even) {
-  background-color: #dddddd;
-}
 .no-data {
   text-align: center;
+}
+.ReactTable {
+  border: 1px solid black;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.ReactTable .rt-noData {
+  color: black;
+}
+.ReactTable .rt-tbody .rt-td {
+  border-right: 1px solid rgb(0 0 0 / 5%);
+  text-align: center;
+}
+.ReactTable .rt-thead.-header {
+  box-shadow: none;
+}
+.ReactTable .rt-thead.-header {
+  border: 1px solid;
+}
+.ReactTable .rt-noData {
+  margin-top: 56px;
+  background-color: #ffffff;
+}
+.ReactTable .rt-resizer {
+  display: none;
+}
+.ReactTable .rt-thead .rt-th,
+.ReactTable .rt-thead .rt-td {
+  position: unset;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04aa6d;
 }

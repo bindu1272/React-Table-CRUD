@@ -3,10 +3,12 @@ import ReactTable from "react-table";
 import "react-table/react-table.css";
 import Helper from "../Utils/Helper";
 import { SUBJECTS } from "../Utils/Constants";
+const CustomNoDataComponent = () => {
+  return <div className="rt-noData">No rows found</div>
+}
 class TableReact extends Component {
-  constructor(props) {
-    super(props)
-  
+  constructor() {
+    super();
     this.state = {
       isEdit: false,
       students: {
@@ -87,7 +89,7 @@ class TableReact extends Component {
     let subjects = [...SUBJECTS];
     let checkedSubjects = [...students.subjects];
     for (let i = 0; i < checkedSubjects.length; i++) {
-      for (let j = 0; j < SUBJECTS.length; j++) {
+      for (let j = 0; j < subjects.length; j++) {
         if (subjects[j].subName === checkedSubjects[i]) {
           subjects[j] = { ...subjects[j], checked: true };
         }
@@ -115,6 +117,7 @@ class TableReact extends Component {
       isEdit: false,
     });
   };
+  
   render() {
     const columns = [
       {
@@ -125,7 +128,7 @@ class TableReact extends Component {
       {
         Header: "Action",
         Cell: (row) => (
-          <div>
+          <div className="actions">
               <button onClick={()=>this.editInformation(row.index)}>Edit</button>
               <button onClick={()=>this.removeInformation(row.index)}>Delete</button>
           </div>
@@ -147,9 +150,10 @@ class TableReact extends Component {
         )}
         <ReactTable
           data={this.state.studentInfo}
-          minRows={1}
+          minRows={0}
           columns={columns}
           showPagination={false}
+          NoDataComponent={CustomNoDataComponent}
         />
       </div>
     );
