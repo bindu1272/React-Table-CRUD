@@ -36,10 +36,11 @@ const Helper = {
                     type="radio"
                     value={i}
                     name="gender"
+                    id = {g+i}
                     checked={gender == i ? true : false}
                     onChange={changeHandler}
                   />
-                  <label>{g}</label>
+                  <label htmlFor={g+i}>{g}</label>
                 </Fragment>
               );
             })}

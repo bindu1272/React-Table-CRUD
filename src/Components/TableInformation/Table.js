@@ -40,7 +40,7 @@ class Table extends Component {
     let students = { ...this.state.students };
     let subjects = [...students.subjects];
     let checkedSubjects = [];
-    subjects.map((subject, i) => {
+    subjects.map(subject => {
       if (subject.checked) {
         checkedSubjects.push(subject.subName);
       }
