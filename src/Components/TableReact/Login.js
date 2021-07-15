@@ -79,7 +79,7 @@ class Login extends Component {
     );
   };
   render() {
-    return <div>{this.state.success ? <TableReact /> : this.loginForm()}</div>;
+    return <div className="success-details">{this.state.success ? <TableReact /> : this.loginForm()}</div>;
   }
 }
 export default Login;

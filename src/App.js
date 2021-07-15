@@ -5,7 +5,7 @@ import Login from './Components/TableReact/Login.js';
 class App extends Component {
   render() {
     return (
-      <div>
+      <div className="table-crud">
         <Login/>
       </div>
     );

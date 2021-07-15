@@ -251,10 +251,10 @@ class TableReact extends Component {
             )}
           </div>
         )}
-        <div className="constantInfo">
+        <div className="constant-info">
           <h1 align="center">Students Information</h1>
-          <div className="searchData">
-            <div>
+          <div className="search-data">
+            <div className="input-search">
               <input
                 type="text"
                 placeholder="Enter student Name"
@@ -264,7 +264,7 @@ class TableReact extends Component {
                 Search
               </button>
             </div>
-            <button onClick={this.addForm}>Add Student</button>
+            <button onClick={this.addForm} className="add-button">Add </button>
           </div>
           <ReactTable
             data={

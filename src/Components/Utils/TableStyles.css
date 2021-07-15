@@ -75,7 +75,7 @@ select option {
 .remove {
   background-color: #f24906;
 }
-.searchData {
+.search-data {
   display: flex;
   justify-content: space-between;
   width: 70%;
@@ -173,6 +173,27 @@ li a:hover:not(.active) {
 .ReactTable .rt-thead.-filters input, .ReactTable .rt-thead.-filters select{
   height: 24px;
 }
-
+@media (max-width: 767px) {
+  input [type="text"]{
+    font-size: 12px;
+    width: 180px;
+  }
+  .constant-info{
+    display: flex;
+    flex-direction: column;
+  }
+  .search-data{
+    width: 100%;
+    padding: 0px 16px 0px 16px;
+    justify-content: unset;
+  }
+  .input-search{
+    display: flex;
+    margin-right: 12px;
+  }
+  .ReactTable{
+    width: 90%;
+  }
+}
 
 

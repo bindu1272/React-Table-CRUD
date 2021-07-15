@@ -8,9 +8,9 @@ body {
     width: 50%;
 
     .login-page {
-        fieldset{
-            margin-top: unset;
-        }
+      fieldset {
+        margin-top: unset;
+      }
       .admin {
         margin-bottom: 20px;
         font-size: 24px;
@@ -30,8 +30,8 @@ body {
           width: 100%;
           margin-top: 12px;
         }
-        label{
-            margin-left: 42px;
+        label {
+          margin-left: 42px;
         }
         .username,
         .password {
@@ -75,6 +75,22 @@ body {
     .success {
       color: green;
       font-size: 20px;
+    }
+  }
+}
+@media (max-width: 767px) {
+  body {
+    .table-crud {
+     .success-details{
+       width: 100%;
+      .form {
+        margin-left: unset;
+        margin-right: unset;
+        width: 100%;
+        padding: unset;
+        margin-top: 80px;
+      }
+    }
     }
   }
 }
