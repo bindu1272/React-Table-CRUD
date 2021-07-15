@@ -1,0 +1,80 @@
+body {
+  .form {
+    padding: 16px;
+    background-color: white;
+    border-radius: 8px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 50%;
+
+    .login-page {
+        fieldset{
+            margin-top: unset;
+        }
+      .admin {
+        margin-bottom: 20px;
+        font-size: 24px;
+        font-weight: 600;
+        display: flex;
+        justify-content: center;
+      }
+      .login-details {
+        display: flex;
+        flex-direction: column;
+        .login-feilds {
+          display: flex;
+          justify-content: center;
+          margin-left: auto;
+          margin-right: auto;
+          align-items: baseline;
+          width: 100%;
+          margin-top: 12px;
+        }
+        label{
+            margin-left: 42px;
+        }
+        .username,
+        .password {
+          margin-bottom: 20px;
+          margin-left: auto;
+          margin-right: auto;
+          padding: 16px 0px 12px 12px;
+          border: 1px solid black;
+          font-size: 16px;
+        }
+      }
+      .forgot {
+        text-align: right;
+        font-size: 18px;
+      }
+      .submit-button {
+        margin-top: 40px;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #5a6175;
+        width: 140px;
+        height: 48px;
+        border: unset;
+        font-weight: 600;
+        outline: none;
+        font-size: 18px;
+        font-family: sans-serif;
+        cursor: pointer;
+        border-radius: 4px;
+        &:hover {
+          background-color: #37a0ff;
+          color: #4e1414;
+        }
+      }
+    }
+    .invalid {
+      color: red;
+      font-size: 20px;
+      text-align: center;
+    }
+    .success {
+      color: green;
+      font-size: 20px;
+    }
+  }
+}

@@ -11,10 +11,11 @@ const Helper = {
     isEdit,
     changeHandler,
     changeCheckboxHandler,
-    createInformation
+    createInformation,
+    changeCancel
   ) => {
     return (
-      <form onSubmit={createInformation}>
+      <form onSubmit={createInformation} className="modal-content">
         <fieldset>
           <legend>Student Details</legend>
           <div className="details">
@@ -58,10 +59,12 @@ const Helper = {
           <div className="details">
             <label>Phone Number</label>
             <input
-              type="number"
+              type="text"
               value={phoneNumber}
               name="phoneNumber"
               onChange={changeHandler}
+              maxLength = "10"
+              required
             />
           </div>
           <div className="details">
@@ -82,6 +85,7 @@ const Helper = {
           </div>
           <div className="details">
             <button type="submit">{isEdit ? "update" : "create"}</button>
+            <button onClick={changeCancel} className="close">Cancel</button>
           </div>
         </fieldset>
       </form>

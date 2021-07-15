@@ -8,14 +8,21 @@ label {
 fieldset {
   margin-bottom: 40px;
   margin-top: 40px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
 button {
   cursor: pointer;
-  color: black;
-  height: 32px;
+  height: 34px;
   font-weight: 600;
   outline: none;
   font-size: 16px;
+  color: #ffffff;
+  background: #0078e7;
+  border: none;
+  border-radius: 4px;
+  padding: 8px;
 }
 table {
   width: 40%;
@@ -29,31 +36,78 @@ table {
 }
 table td,
 th {
-  border: 1px solid;
+  border: 2px solid;
   text-align: center;
   padding: 8px;
 }
 .no-data {
   text-align: center;
 }
-.ReactTable {
-  border: 1px solid black;
+input[type="text"],input[type="password"]{
+  width: 200px;
+  height: 18px;
+  border-radius: 4px;
+  outline: none;
+  padding: 4px;
+  padding-left: 12px;
+  font-size: 18px;
+}
+button[type="submit"] {
+  margin-right: 16px;
+}
+select {
+  height: 2.25em;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  font-weight: 600;
+  width: 140px;
+}
+select option {
+  font-weight: normal;
+  display: block;
+  white-space: nowrap;
+  min-height: 1.2em;
+  padding: 0px 2px 1px;
+}
+.search-button {
+  margin-left: 16px;
+}
+.remove {
+  background-color: #f24906;
+}
+.searchData {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+}
+.ReactTable {
+  border: 2px solid black;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  margin-top: 28px;
 }
 .ReactTable .rt-noData {
   color: black;
 }
 .ReactTable .rt-tbody .rt-td {
-  border-right: 1px solid rgb(0 0 0 / 5%);
+  border-right: 2px solid black;
   text-align: center;
 }
 .ReactTable .rt-thead.-header {
   box-shadow: none;
 }
+.ReactTable .rt-thead .rt-th,
+.ReactTable .rt-thead .rt-td {
+  border-right: 2px solid black;
+}
+.ReactTable .rt-tbody .rt-td {
+  border-right: 2px solid black;
+}
 .ReactTable .rt-thead.-header {
-  border: 1px solid;
+  border-bottom: 2px solid;
 }
 .ReactTable .rt-noData {
   margin-top: 56px;
@@ -94,3 +148,31 @@ li a:hover:not(.active) {
 .active {
   background-color: #04aa6d;
 }
+.modal {
+  position: fixed;
+  z-index: 2;
+  padding-top: 100px; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgba(0,0,0,0.4); 
+}
+.modal-content {
+  background-color: #fefefe;
+  border-radius: 12px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 70%;
+}
+.close{
+  float: right;
+}
+.ReactTable .rt-thead.-filters input, .ReactTable .rt-thead.-filters select{
+  height: 24px;
+}
+
+
+
