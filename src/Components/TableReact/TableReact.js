@@ -257,7 +257,7 @@ class TableReact extends Component {
             <div className="input-search">
               <input
                 type="text"
-                placeholder="Enter student Name"
+                placeholder="Enter Name"
                 onChange={this.searchValue}
               />
               <button onClick={this.searchHandler} className="search-button">

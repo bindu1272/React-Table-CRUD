@@ -68,7 +68,7 @@ const Helper = {
             />
           </div>
           <div className="details">
-            <label>Favourite Subjects</label>
+            <label className="subject">Subjects</label>
             {subjects.map((subject, i) => {
               return (
                 <Fragment>
@@ -78,7 +78,7 @@ const Helper = {
                     checked={subject.checked}
                     onChange={() => changeCheckboxHandler(i)}
                   />
-                  <label>{subject.subName}</label>
+                  <label className="subject">{subject.subName}</label>
                 </Fragment>
               );
             })}
